@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+
+<body onload="onInit()">
+
+    <h1 data-trans="title">Welcome to my book shop !😄📚</h1>
+
+    <select class="language" onchange="onSetLang(this)" name="" id="">
+        <option value="">Language</option>
+        <option value="he">Hebrew</option>
+        <option value="en">English</option>
+    </select>
+
+    <div class="create-and-filer">
+
+        <p data-trans="createBook" class="create-book" onclick="onAddBook()">Create new book</p>
+
+        <div class="min-rate-container">
+            <label data-trans="minRate" class="filter-label">Minimum rate: </label>
+            <input class="filter-input" type="range" value="0" min="0" max="10"
+                oninput="onSetFilterBy({minRate: this.value})">
+            <span class="min-rate"></span>
+        </div>
+
+        <input data-trans="searchByName" class="filter-name" type="text" placeholder="Search by name"
+            oninput="onSetFilterBy({name: this.value})">
+
+        <select class="sort" onchange="onSortBy()">
+            <option data-trans="sortBy" value="">Sort by</option>
+            <option data-trans="priceSort" value="price">Price</option>
+            <option data-trans="nameSort" value="name">Name</option>
+        </select>
+        
+    </div>
+
+    <div class="books">
+        <table></table>
+    </div>
+
+    <br>
+    <button data-trans="prevPage" class="prev-btn" onclick="onGetNextPage(false)">Prev Page</button>
+    <button data-trans="nextPage" class="next-btn" onclick="onGetNextPage(true)">Next Page</button>
+
+    <div class="modal hidden"></div>
+
+    <div class="user-msg"></div>
+
+    <footer>
+        <p data-trans="cheap">Cheap: </p><span class="cheap"></span>
+        <p data-trans="normal">Normal: </p><span class="normal"></span>
+        <p data-trans="expensive">Expensive: </p><span class="expensive"></span>
+    </footer>
+
+
+    <script src="/lib/hammer.js"></script>
+    <script src="/js/services/utils.service.js"></script>
+    <script src="/js/services/book.service.js"></script>
+    <script src="/js/book.controller.js"></script>
+
+</body>
+
+</html>

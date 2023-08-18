@@ -1,0 +1,247 @@
+body {
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body.rtl{
+    direction: rtl;
+}
+
+h1 {
+    background-color: #434343;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+td {
+    text-align: start;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+    font-size: 17px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+.books {
+    display: flex;
+    justify-content: center;
+}
+
+table{
+    width: 60%;
+}
+
+.table-bth {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 17px;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: white;
+}
+
+.table-bth:hover {
+    background-color: #2980b9;
+}
+
+th {
+    font-size: 17px;
+    background-color: #e1e1e1;
+    text-align: start;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+.read-btn {
+    background-color: rgb(53, 53, 211);
+}
+
+.update-btn {
+    background-color: rgb(236, 169, 25);
+}
+
+.delete-btn {
+    background-color: rgb(244, 45, 42);
+}
+
+.create-book {
+    color: rgb(0, 169, 221);
+    font-weight: bold;
+    cursor: pointer;
+    width: fit-content;
+    margin: 0px;
+}
+
+.user-msg {
+    position: fixed;
+    bottom: 5vh;
+    right: -50vw;
+
+    transition: right 1000ms;
+
+    color: white;
+    background-color: #434343;
+    font-size: 20px;
+
+    padding: 20px;
+    width: 15vw;
+}
+
+.open {
+    right: 0vw;
+}
+
+.modal {
+    position: fixed;
+    top: 15vh;
+    right: 6vw;
+
+    width: 80vw;
+    height: 64vh;
+    background-color: rgb(186, 211, 220);
+    opacity: 0.98;
+
+    font-size: 18px;
+    font-weight: bold;
+    text-align: start;
+    padding: 4vw;
+    border: 3px solid rgb(159, 181, 189);
+    border-radius: 10px;
+    overflow-y: scroll;
+}
+
+.hidden {
+    display: none;
+}
+
+.modal span {
+    font-weight: normal;
+}
+
+.x-btn {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    cursor: pointer;
+}
+
+.book-name {
+    font-size: 40px;
+    text-align: center;
+}
+
+.span-num {
+    position: relative;
+    top: 3px;
+    background-color: white;
+    padding: 5px;
+    padding-inline: 30px;
+    font-weight: bold;
+}
+
+.rate-btn-low,
+.rate-btn-high {
+    cursor: pointer;
+    background-color: #6f95a9;
+    color: white;
+    font-weight: bold;
+    border: 0px;
+    padding: 9px;
+    width: 40px;
+    border-radius: 2px;
+}
+
+.create-and-filer {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+
+    margin-inline: auto;
+    width: 60%;
+    margin-bottom: 5px;
+    margin-top: 20px;
+}
+
+.filter-label {
+    font-size: 17px;
+}
+
+.sort , .language{
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+}
+
+.prev-btn,
+.next-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgb(123, 123, 123);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+}
+
+.prev-btn:hover {
+    background-color: #6f95a9;
+}
+
+.next-btn:hover {
+    background-color: #6f95a9;
+}
+
+.disable {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+footer { 
+    background-color: #5f5f5f;
+    color: white;
+    padding: 20px;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 19px;
+}
+
+footer p{
+    display: inline;
+    margin-inline-start: 30px;
+}
+
+.filter-name{
+    padding: 6.5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.min-rate-container{
+    display: flex;
+}
+
+.modal p{
+    display: inline;
+    margin-inline-end: 7px;
+}
